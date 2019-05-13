@@ -3,7 +3,17 @@ ul#flex-container {
     margin: 0;
     padding: 0;
     display: flex;
+    
+}
+
+ul#flex-container2 {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 ul li {
