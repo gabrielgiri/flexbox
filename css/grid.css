@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFE2DF;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    grid-template-rows: 200px 100px 90px 50px 20px;
+    grid-gap: 5px;
+}
+
+.grid-container p{
+    background-color:#E8A0AB;
+    border:solid 1px #E8707B;
+    padding:5px;
+    text-align: center;
+}
+
+.grid-item-double {
+    grid-column: span 2;
+}

@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    display: grid;
+    grid-auto-columns: 30% auto;
+    grid-template-rows: 60px auto 60px;
+    grid-template-areas: "hd hd";
+}
+
+header{
+    background-color:rosybrown;
+}
+
+main{
+    background-color: blanchedalmond;
+}
+
+footer { 
+    background-color: aquamarine;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 100px 80px 180px 80px;
+    grid-template-rows: 200px 100px 90px 50px 20px;
+  }
+
+  .grid-container p{
+      background-color: antiquewhite;
+      border:solid 1px; }
