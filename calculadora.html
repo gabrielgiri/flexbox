@@ -8,9 +8,6 @@
     <title>Calculadora con Grid</title>
     <style>
     
-
-
-
 body {
   margin: 40px;
 }
@@ -18,64 +15,111 @@ body {
 .wrapper {
     display: grid;
     grid-gap: 10px;
-        grid-template-columns: 100px 100px 100px 70px 70px;
-        color: #444;
-        
-    }
+    grid-template-columns: 60px 100px 100px 100px 60px 60px;
+    color: #444;
+    background-color: #333;
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 10px;
+    box-shadow: -5px 5px rgb(87, 87, 87), -4px 4px   rgb(87, 87, 87), -2px 2px  rgb(87, 87, 87);
+}
 
-    .box {
-        background-color: #444;
-        color: #fff;
-        border-radius: 5px;
-        padding: 20px;
-        border-radius: 5px;
-        font-size: 150%;
+.box {
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 150%;
+    box-shadow: -3px 3px #999, -2px 2px #999, -1px 1px #999;
+    border: 1px solid #999;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
 
-    }
+.box:hover {
+    box-shadow: 0 0 #999, 0 0 #999, 0 0 #999;
+    cursor: pointer;
+}
 
-    .led {background-color: black;
-        font-family: 'Orbitron', sans-serif;
-        font-size: 20px;
-    color:brown;}
+.led {
+    background-color: black;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    color:brown;
+    text-align: right;
+    box-shadow: none;
+}
 
-    .full-grid {
-        grid-column: span 5;
-    }
+.full-grid {
+    grid-column: span 6;
+}
 
-   
-    input {
-       
-    }
+.full-square {
+    grid-column: span 2;
+    grid-row: span 2;   
+}
+
+.rojo {
+    background-color: brown;
+}
+
+.naranja {
+    background-color: chocolate;
+}
+
+.gris {
+    background-color: #222;
+}
+
+p {
+    color: #ccc;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: auto;
+    font-family: monospace;
+    width: 100%;
+    width: max-content;
+}
 
 </style>
+
+<script>
+    function displayNumber(number) {
+        currentValue = (document.getElementById("led").value);
+        document.getElementById("led").value = currentValue + number;
+    }
+  </script>
+
 </head>
 <body>
 
-
-
 <div class="wrapper">
-    <input class="led box full-grid"></input>
-        <div class="box">7</div>
-        <div class="box">8</div>
-        <div class="box">9</div>
-        <div class="box">D</div>
-        <div class="box">A</div>
-        <div class="box">4</div>
-        <div class="box">5</div>
-        <div class="box">6</div>
-        <div class="box">A</div>
-        <div class="box">B</div>
-        <div class="box">1</div>
-        <div class="box">2</div>
-        <div class="box">3</div>
-        <div class="box">B</div>
-        <div class="box">C</div>
-        <div class="box">0</div>
-        <div class="box">00</div>
-        <div class="box">.</div>
+    <p>Calculadora con flex</p>
+    <input id="led" class="led box full-grid"></input>
+        <div class="box naranja">m+</div>    
+        <div class="box" onclick="displayNumber(7)">7</div>
+        <div class="box" onclick="displayNumber(8)">8</div>
+        <div class="box" onclick="displayNumber(9)">9</div>
+        <div class="box gris">+</div>
+        <div class="box gris">-</div>
+        <div class="box naranja">m-</div>  
+        <div class="box" onclick="displayNumber(4)">4</div>
+        <div class="box" onclick="displayNumber(5)">5</div>
+        <div class="box" onclick="displayNumber(6)">6</div>
+        <div class="box gris">x</div>
+        <div class="box gris">/</div>
+        <div class="box rojo">CE</div>  
+        <div class="box" onclick="displayNumber(1)">1</div>
+        <div class="box" onclick="displayNumber(2)">2</div>
+        <div class="box" onclick="displayNumber(3)">3</div>
+        <div class="box gris full-square">=</div>
+        <div class="box rojo">ON</div>
+        <div class="box" onclick="displayNumber(0)">0</div>
+        <div class="box" onclick="displayNumber(00)">00</div>
+        <div class="box" onclick="displayNumber(.)">.</div>
       </div>
-      
-      
-    
 </body>
 </html>

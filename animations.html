@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <title>CSS Animations</title>
+    <style>
+      body {
+        margin: 40px;
+      }
+
+      .wrapper {
+        color: white;
+    font-size: 26px;
+    margin: 10px;
+    padding: 20px;
+    width: fit-content;
+    min-width: 250px;
+    text-align: center;
+    float: left;
+    background-color: #9c3e00;
+    transition-property: background-color;
+        transition-duration: .4s;
+      }
+
+      .wrapper:hover {
+        background-color: #004c50;
+      }
+
+      .demo1 {
+       
+       
+      }
+
+      .demo1:hover {
+       
+      }
+
+      .demo2 {
+        transition-property: border-radius;
+      }
+
+      .demo2:hover {
+        border-radius: 20%;
+      }
+
+      .demo3 {
+         transition-property:  transform;
+      }
+
+      .demo3:hover {
+        transform: rotate(180deg);
+      }
+
+      .demo4 {
+        transition-property: transform;
+      }
+
+      .demo4:hover {
+        transform: skewX(-20deg);
+      }
+
+      .demo5 {
+        transition-property: transform;
+      }
+
+      .demo5:hover {
+        transform: scale(110%);
+      }
+
+      .demo6 {
+        transition: transform 1s;
+      }
+
+      .demo6:hover {
+        transform: translateX(10px);
+      }
+
+      .demo7 {
+        transition: transform 1s;
+      }
+
+      .demo7:hover {
+        transform: translateY(10px);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="wrapper demo1">
+      <p>background-color</p>
+    </div>
+
+    <div class="wrapper demo2">
+      <p>border-radius</p>
+    </div>
+
+    <div class="wrapper demo3">
+        <p>rotate(180deg)</p>
+      </div>
+
+      <div class="wrapper demo4">
+        <p>skewX(-20deg);</p>
+      </div>
+
+      <div class="wrapper demo5">
+        <p>scale(110%);</p>
+      </div>
+
+      <div class="wrapper demo6">
+        <p>translateX(10px)</p>
+      </div>
+
+      <div class="wrapper demo7">
+        <p>translateY(10px)</p>
+      </div>
+
+  </body>
+</html>
